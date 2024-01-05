@@ -1,0 +1,23 @@
+// Thread.tsx - Component for displaying a single forum thread
+
+import React from 'react';
+import { useParams } from 'react-router-dom';
+
+interface ThreadParams {
+  id: string;
+}
+
+const Thread: React.FC = () => {
+  const { id } = useParams<ThreadParams>();
+
+  // Fetch and display the content of the selected thread
+
+  return (
+    <div>
+      <h2>Thread {id}</h2>
+      {/* Display thread content and comments */}
+    </div>
+  );
+};
+
+export default Thread;
