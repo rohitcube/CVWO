@@ -1,0 +1,23 @@
+// UserProfile.tsx - Component for displaying user profiles
+
+import React from 'react';
+import { useParams } from 'react-router-dom';
+
+interface UserProfileParams {
+  username: string;
+}
+
+const UserProfile: React.FC = () => {
+  const { username } = useParams<UserProfileParams>();
+
+  // Fetch and display user information and activity
+
+  return (
+    <div>
+      <h2>User Profile: {username}</h2>
+      {/* Display user details and activity */}
+    </div>
+  );
+};
+
+export default UserProfile;
